@@ -111,23 +111,7 @@ body {
 
 /* SIDEBAR */
 
-/*
-.sidebar {
-    width: 220px;
-    padding: 1rem;
 
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
-
-    background: #fff;
-    border-right: 1px solid #eee;
-}
-
-*/
 
 .sidebar {
     width: 220px;
@@ -262,30 +246,7 @@ body {
 
 }
 
-/* MOBILE RESPONSIVE */
 
-/*
-@media (max-width: 768px) {
-
-    .layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-    }
-
-    .header nav a {
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-
-    .content {
-        padding: 1rem;
-    }
-}
-
-*/
 
 .menu-toggle {
     display: none;
@@ -296,18 +257,29 @@ body {
 @media (max-width: 768px) {
 
     /* HEADER */
-
     .header {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
         gap: 1rem;
     }
 
     .search-bar {
         order: 3;
+        flex: 0 0 100%;
         width: 100%;
         margin: 0;
     }
+
+    .search-bar input {
+        max-width: 100%;
+    }
+
+    .logo-section {
+        flex-shrink: 0;
+    }
+
 
     /* HAMBURGER */
 
