@@ -105,8 +105,8 @@ body {
 
 .layout {
     display: flex;
-    min-height: calc(100vh - 140px);
     align-items: flex-start; /* IMPORTANT */
+    width: 100%;
 }
 
 /* SIDEBAR */
@@ -130,19 +130,20 @@ body {
 */
 
 .sidebar {
+    width: 220px;
+    min-height: calc(100vh - 70px);
+
     padding: 1rem;
 
     position: sticky;
-   
     top: 70px;
-    left: 0;
-    height: calc(100vh - 70px);
-    width: 220px;
-    overflow-y: auto;
 
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.08);
+    align-self: flex-start;
+
     background: #fff;
     border-right: 1px solid #eee;
+
+    box-shadow: 1px 0 6px rgba(0,0,0,0.05);
 }
 
 .sidebar a {
@@ -191,7 +192,7 @@ body {
 .content {
     flex: 1;
     padding: 2rem;
-    margin-left: 220px;
+    min-width: 0;
 }
 
 /* VIDEO GRID */
@@ -249,11 +250,16 @@ body {
 /* FOOTER */
 
 .footer {
+
     background: #333;
     color: white;
+
     text-align: center;
+
     padding: 1rem;
-    margin-left: 220px;
+
+    width: 100%;
+
 }
 
 /* MOBILE RESPONSIVE */
