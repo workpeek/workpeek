@@ -10,6 +10,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+/* GLOBAL EJS VARIABLES */
+app.use((req, res, next) => {
+    res.locals.currentPath = req.path;
+    next();
+});
+
+
 // Routes
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
